@@ -1,24 +1,26 @@
+use library;
+
 /*==================== POPULATING TABLES ======================*/
-	
+
 	INSERT INTO tbl_publisher
 		(publisher_PublisherName, publisher_PublisherAddress, publisher_PublisherPhone)
 		VALUES
-		('DAW Books','375 Hudson Street, New York, NY 10014','212-366-2000'),
-		('Viking','375 Hudson Street, New York, NY 10014','212-366-2000'),
-		('Signet Books','375 Hudson Street, New York, NY 10014','212-366-2000'),
-		('Chilton Books','Not Available','Not Available'),
-		('George Allen & Unwin','83 Alexander Ln, Crows Nest NSW 2065, Australia','+61-2-8425-0100'),
-		('Alfred A. Knopf','The Knopf Doubleday Group Domestic Rights, 1745 Broadway, New York, NY 10019','212-940-7390'),		
-		('Bloomsbury','Bloomsbury Publishing Inc., 1385 Broadway, 5th Floor, New York, NY 10018','212-419-5300'),
-		('Shinchosa','Oga Bldg. 8, 2-5-4 Sarugaku-cho, Chiyoda-ku, Tokyo 101-0064 Japan','+81-3-5577-6507'),
-		('Harper and Row','HarperCollins Publishers, 195 Broadway, New York, NY 10007','212-207-7000'),
-		('Pan Books','175 Fifth Avenue, New York, NY 10010','646-307-5745'),
-		('Chalto & Windus','375 Hudson Street, New York, NY 10014','212-366-2000'),
-		('Harcourt Brace Jovanovich','3 Park Ave, New York, NY 10016','212-420-5800'),
-		('W.W. Norton',' W. W. Norton & Company, Inc., 500 Fifth Avenue, New York, New York 10110','212-354-5500'),
-		('Scholastic','557 Broadway, New York, NY 10012','800-724-6527'),
-		('Bantam','375 Hudson Street, New York, NY 10014','212-366-2000'),
-		('Picador USA','175 Fifth Avenue, New York, NY 10010','646-307-5745')		
+		('DAW Book','375 Hudson Street, New York, NY 10014','212-366-2000'),
+		('Vikings','375 Hudson Street, New York, NY 10014','212-366-2000'),
+		('Signet Book','375 Hudson Street, New York, NY 10014','212-366-2000'),
+		('Chilton Book','Not Available','Not Available'),
+		('George Allen And Unwin','83 Alexander Ln, Crows Nest NSW 2065, Australia','+61-2-8425-0100'),
+		('Alfred A. N. Knopf','The Knopf Doubleday Group Domestic Rights, 1745 Broadway, New York, NY 10019','212-940-7390'),		
+		('Bloomsburys','Bloomsbury Publishing Inc., 1385 Broadway, 5th Floor, New York, NY 10018','212-419-5300'),
+		('Shinchosas','Oga Bldg. 8, 2-5-4 Sarugaku-cho, Chiyoda-ku, Tokyo 101-0064 Japan','+81-3-5577-6507'),
+		('Harper and Rows','HarperCollins Publishers, 195 Broadway, New York, NY 10007','212-207-7000'),
+		('Pan Book','175 Fifth Avenue, New York, NY 10010','646-307-5745'),
+		('Chalto And Windus','375 Hudson Street, New York, NY 10014','212-366-2000'),
+		('Harcourt Braces Jovanovich','3 Park Ave, New York, NY 10016','212-420-5800'),
+		('W.W. Nortons',' W. W. Norton & Company, Inc., 500 Fifth Avenue, New York, New York 10110','212-354-5500'),
+		('Scholastics','557 Broadway, New York, NY 10012','800-724-6527'),
+		('Bantams','375 Hudson Street, New York, NY 10014','212-366-2000'),
+		('Picador & USA','175 Fifth Avenue, New York, NY 10010','646-307-5745')		
 	;
 
 	INSERT INTO tbl_book
@@ -45,8 +47,6 @@
 		('A Game of Thrones', 'Bantam'),
 		('The Lost Tribe', 'Picador USA');
 
-	SELECT * FROM tbl_book WHERE book_PublisherName = 'George Allen & Unwin'
-
 	INSERT INTO tbl_library_branch
 		(library_branch_BranchName, library_branch_BranchAddress)
 		VALUES
@@ -55,9 +55,8 @@
 		('Saline','40 State Street, Saline, MI 48176'),
 		('Ann Arbor','101 South University, Ann Arbor, MI 48104');
 
-
 	INSERT INTO tbl_borrower
-		(borrower_BorrowerName, borrower_BorrowerAddress, borrower_BorrowerPhone)
+		(borrower_BorrowerName, borrower_BorrowerAddress, borrower_CardNo)
 		VALUES
 		('Joe Smith','1321 4th Street, New York, NY 10014','212-312-1234'),
 		('Jane Smith','1321 4th Street, New York, NY 10014','212-931-4124'),
@@ -67,7 +66,7 @@
 		('Tom Haverford','23 75th Street, New York, NY 10014','212-631-3418'),
 		('Haley Jackson','231 52nd Avenue New York, NY 10014','212-419-9935'),
 		('Michael Horford','653 Glen Avenue, Ann Arbor, MI 48104','734-998-1513');
-	
+
 
 
 	INSERT INTO tbl_book_loans
@@ -125,7 +124,7 @@
 		('4','4','103','1/19/18','2/19/18'),
 		('1','4','103','1/22/18','2/22/18');
 
-		
+
 
 
 	INSERT INTO tbl_book_copies
